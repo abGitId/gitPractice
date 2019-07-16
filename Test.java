@@ -4,6 +4,7 @@ public class Test{
 
 public static void main(String[] args) {
         System.out.println("Test class started...\n");
+
         int num1, num2, sum;
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter First Number: ");
