@@ -94,3 +94,60 @@ pick e621241 git-command | delete branch command added
 ```sh
 $ git push --force
 ```
+
+# SQUASH
+
+```sh
+$ git rebase -i HEAD~5
+```
+
+```sh
+pick 4a3f7f4 git-command | delete branch command added
+pick e566bfe git-command | reword using git rebase command added in readme file
+pick c00f38f git-command | updated readme file format
+pick affb1e7 git-command | updated readme file format
+pick c4a1c4b git-command | updated readme file format
+
+# Rebase 4d58e45..c4a1c4b onto 4d58e45 (5 commands)
+#
+# Commands:
+# p, pick <commit> = use commit
+# r, reword <commit> = use commit, but edit the commit message
+# e, edit <commit> = use commit, but stop for amending
+# s, squash <commit> = use commit, but meld into previous commit
+# f, fixup <commit> = like "squash", but discard this commit's log message
+# x, exec <command> = run command (the rest of the line) using shell
+# d, drop <commit> = remove commit
+# l, label <label> = label current HEAD with a name
+# t, reset <label> = reset HEAD to a label
+# m, merge [-C <commit> | -c <commit>] <label> [# <oneline>]
+# .       create a merge commit using the original merge commit's
+# .       message (or the oneline, if no original merge commit was
+# .       specified). Use -c <commit> to reword the commit message.
+#
+# These lines can be re-ordered; they are executed from top to bottom.
+#
+# If you remove a line here THAT COMMIT WILL BE LOST.
+#
+#	However, if you remove everything, the rebase will be aborted.
+#
+#	
+# Note that empty commits are commented out
+
+```
+
+- replace pick with squash where we want to do
+```sh
+pick 4a3f7f4 git-command | delete branch command added
+pick e566bfe git-command | reword using git rebase command added in readme file
+squash c00f38f git-command | updated readme file format
+squash affb1e7 git-command | updated readme file format
+squash c4a1c4b git-command | updated readme file format
+```
+here we are doing for 3 commits .
+
+- then force push changes
+
+```sh
+$ git push --force
+```
