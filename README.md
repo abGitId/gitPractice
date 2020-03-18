@@ -18,3 +18,16 @@ e.g  git push --set-upstream origin release/0.0.1
 
 #Listing of branch
 3. git branch -a
+
+#Delete a branch on your local filesystem :
+
+$ git branch -d [name_of_your_new_branch]
+To force the deletion of local branch on your filesystem :
+
+$ git branch -D [name_of_your_new_branch]
+
+#Delete the branch on github :
+
+$ git push origin :[name_of_your_new_branch]
+
+
