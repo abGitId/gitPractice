@@ -1,46 +1,46 @@
 # gitPractice
 Git Practice 11-11-2016
 
-#create branch
+### create branch
 go to that branch from where we need to create new branch and use below command:
 
 1. creating branch locally:
-git checkout -b <new-branch-name>
-e.g
+
+
 ```sh
-$ git push origie release/0.0.1
+$ git checkout -b <new-branch-name>
 ```
 this will create new branch at local
 now the second step to move this local branch to remote repository
 
-2. pushing loacl branch to remote:
+2. pushing local branch to remote:
 git push --set-upstream origin <new-branch-name>
-e.g  
+ 
 ```sh
 $ git push --set-upstream origin release/0.0.1
 ```
 
-#Listing of branch
+### Listing of branch
 ```sh
 $ git branch -a
 ```
-
-#Delete a branch on your local filesystem :
+### Delete Branch
+- Delete a branch on your local filesystem :
 ```sh
 $ git branch -d [name_of_your_new_branch]
 ```
 
-To force the deletion of local branch on your filesystem :
+- To force the deletion of local branch on your filesystem :
 ```sh
 $ git branch -D [name_of_your_new_branch]
-```sh
+```
 
-#Delete the branch on github :
+- Delete the branch on github :
 ```sh
 $ git push origin :[name_of_your_new_branch]
 ```
 
-#Reword :
+### Reword
 
 - Use the below command to display a list of the last n commits.
 git rebase -i HEAD~n 
@@ -95,7 +95,7 @@ pick e621241 git-command | delete branch command added
 $ git push --force
 ```
 
-# SQUASH
+### SQUASH
 
 ```sh
 $ git rebase -i HEAD~5
