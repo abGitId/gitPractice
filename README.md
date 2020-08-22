@@ -1,6 +1,10 @@
 # gitPractice
 > In this we are doing some basic but useful git commands used in day to day life :)
-### Create branch
+---------------------------------------------------------------------------------------------
+
+### BRANCH
+---------------------------------------------------------------------------------------------
+**Create branch**
 go to that branch from where we need to create new branch and use below command:
 
 - creating branch locally
@@ -19,11 +23,25 @@ $ git push --set-upstream origin <new-branch-name>
 $ git push --set-upstream origin release/0.0.1
 ```
 
-### Listing of branch
+**Listing of branch**
 ```sh
 $ git branch -a
 ```
-### Delete Branch
+
+**Rename Branch**
+
+- checkout the branch which we want to rename and execute below command
+
+```
+$ git branch -m <new-branch-name>
+```
+- Rename branch from any loaction and execute below command
+
+```
+$ git branch -m <old-branch-name> <new-branch-name>
+```
+
+**Delete Branch**
 - Delete a branch on your local filesystem :
 ```sh
 $ git branch -d [name_of_your_new_branch]
@@ -38,8 +56,31 @@ $ git branch -D [name_of_your_new_branch]
 ```sh
 $ git push origin :[name_of_your_new_branch]
 ```
+---------------------------------------------------------------------------------------------
 
-### Reword
+### TAG
+---------------------------------------------------------------------------------------------
+**Creating new tag**
+
+```
+$ git tag <tag-name>
+```
+
+- This is a annotated tag, It adds additional metadata  
+
+```
+$ git tag -a <tag-name>
+```
+- This is a annotated tag, It adds additional metadata and commit message  
+
+```
+$ git tag -a <tag-name> -m 'message'
+```
+---------------------------------------------------------------------------------------------
+
+### REBASE
+---------------------------------------------------------------------------------------------
+**Reword**
 
 - Use the below command to display a list of the last n commits.
 git rebase -i HEAD~n 
@@ -94,7 +135,7 @@ pick e621241 git-command | delete branch command added
 $ git push --force
 ```
 
-### SQUASH
+**SQUASH**
 
 ```sh
 $ git rebase -i HEAD~5
@@ -151,7 +192,7 @@ squash c4a1c4b git-command | updated readme file format
 $ git push --force
 ```
 
-### Drop commit remote
+**Drop commit remote**
 ```sh 
 $ git rebase -i HEAD~2
 ```
@@ -178,6 +219,9 @@ drop bdac559 git-command | drop commit temp dada added
 ```sh
 $ git push --force
 ```
+---------------------------------------------------------------------------------------------
+### RESET
+---------------------------------------------------------------------------------------------
 
 ### to reset our head to prevois commit 
 
