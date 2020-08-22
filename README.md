@@ -135,7 +135,7 @@ pick e621241 git-command | delete branch command added
 $ git push --force
 ```
 
-**SQUASH**
+**Squash**
 
 ```sh
 $ git rebase -i HEAD~5
@@ -223,13 +223,23 @@ $ git push --force
 ### RESET
 ---------------------------------------------------------------------------------------------
 
-### to reset our head to prevois commit 
+**To reset our head to previous commit**
 
 ```sh 
 $ git reset — hard 
 ``` 
 
-### Commit commands 
+**To reset single file to previous commit**
+
+```sh 
+$ git reset <filename>
+``` 
+
+---------------------------------------------------------------------------------------------
+### COMMIT
+---------------------------------------------------------------------------------------------
+
+**Commit commands **
 >Ref- https://www.atlassian.com/git/tutorials/rewriting-history
 
 - To change most recent commit message
